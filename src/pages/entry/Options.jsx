@@ -17,13 +17,8 @@ export default function Options({ optionType }) {
       .catch((error) => setError(true));
   }, [optionType]);
 
-  console.log(
-    `in options, optionType is ${optionType} and error is : ${error}`
-  );
-
   if (error) {
     // @ts-ignore
-    console.log(`rendering alertbanner`);
     return <AlertBanner />;
   }
 
